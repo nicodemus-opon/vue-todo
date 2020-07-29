@@ -55,8 +55,10 @@ export default {
   mounted() {
     feather.replace();
     $(".dis").html("Todo");
+    
   },
   created() {
+
     this.$store.dispatch("retrieveTodos");
   },
   data() {
@@ -94,6 +96,7 @@ export default {
     getTodos() {
       return this.$store.getters.getTodos;
     },
+   
     iconSvg: function (state) {
       return feather.icons.circle.toSvg();
     },

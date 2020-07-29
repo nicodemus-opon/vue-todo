@@ -157,9 +157,17 @@ export default {
       return this.$store.getters.getUser;
     },
     isLogin() {
+       if (this.$store.state.user[0]) {
+        console.log("ok");
+      } else {
+        console.log("not ok");
+         this.$router.push('/login') 
+      }
       return this.$route.name != "login";
     },
-   
+    islog() {
+     
+    },
   },
   methods: {
     logout() {
